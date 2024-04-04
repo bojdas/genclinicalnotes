@@ -23,17 +23,17 @@ def main():
     )
     prompt_with_drug = """You will generate a Clinical Note for an epilepsy patient based on the usage of drug X. Each note should include
         the patient's name, id, date of visit, current medications, chief complaint, general observations, assessment and a followup plan""" 
-    prompt_without_drug = """You will generate a Clinical Note for an epilepsy patient who does not use drug X. Each note should include
-        the patient's name, id, date of visit, current medications, chief complaint, general observations, assessment and a followup plan"""
+    # prompt_without_drug = """You will generate a Clinical Note for an epilepsy patient who does not use drug X. Each note should include
+        # the patient's name, id, date of visit, current medications, chief complaint, general observations, assessment and a followup plan"""
 
     # tbd: A general instruction
     # llm("""I shall ask you to generate clinnical notes. Make each note about an unique patient with a different name and id.
     # Wait for further instructions before generating responses""")
 
     create_notes(llm, num_cases, prompt_with_drug, fl_drug)
-    create_notes(llm, num_cases, prompt_without_drug, fl_no_drug)
+    # create_notes(llm, num_cases, prompt_without_drug, fl_no_drug)
     print()
-    print(f"Created notes at the files {fl_drug} and {fl_no_drug}")
+    print(f"Created notes at the file {fl_drug}")
  
 
 
